@@ -1,10 +1,14 @@
 const express = require('express')
 const cors = require('cors')
 const authRoute = require('./routes/auth')
+require('dotenv').config();
 
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
+
+// Directorio publico
+app.use(express.static('public'))
 
 // CORS
 app.use( cors() );
