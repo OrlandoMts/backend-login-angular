@@ -5,7 +5,7 @@ const {generarJWT} = require('../helpers/jwt');
 
 const createUser = async (req, res = response) => {
     
-    const {name, lastName, postalCode, email, password} = req.body
+    const {name, email, password} = req.body
 
     try {
         // Verificar email
@@ -126,7 +126,7 @@ const searchUser =  async (req, res = response) => {
 };
 
 const updateAccount = async (req, res = response) => {
-    const { uid, name } = req;
+    const { uid } = req;
 
     try {
 
