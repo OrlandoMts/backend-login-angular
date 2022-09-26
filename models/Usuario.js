@@ -5,6 +5,10 @@ const UsuarioSchema = Schema({
         type: String,
         require: true
     },
+    lastName: {
+        type: String,
+        require: true
+    },
     email: {
         type: String,
         require: true,
@@ -13,6 +17,21 @@ const UsuarioSchema = Schema({
     password: {
         type: String,
         require: true
+    },
+    address: {
+        type: String,
+    },
+    city: {
+        type: String
+    }, 
+    country: {
+        type: String
+    },
+    postalCode: {
+        type: Number
+    },
+    about: {
+        type: String
     }
 });
 
